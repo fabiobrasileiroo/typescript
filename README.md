@@ -4,7 +4,7 @@
 ### como string, boolean, number...
 
 ## Tipos assim no TS:
-#### *obs*: chamamos de <strong>annotation</strong>, pois estavamos dizendo que aquela variavel é
+ *obs*: chamamos de ```annotation```, pois estavamos dizendo que aquela variavel é
 do tipo number.
 ```typescript 
 let x: number = 10;
@@ -13,7 +13,7 @@ console.log(typeof x);// Tipo number
 console.log(x);// voltar 20 como esperado
 ```
 
-#### *obs*: dessa forma chamamos de <strong>inferencia</strong>, pois o proprio compilador do TS vai inferir esse valor do primeiro tipo declarado 
+#### *obs*: dessa forma chamamos de ```inferencia```, pois o proprio compilador do TS vai inferir esse valor do primeiro tipo declarado 
 ```typescript
 let y = 50;
 y = 30;
@@ -23,7 +23,7 @@ console.log(y);// voltar 30
 ```
 
 ### Como tipar um array? 
-#### *obs*: lembre que um array sempre é um objeto, isso são as estranhezas do JS, não me julge :)
+ *obs*: lembre que um array sempre é um objeto, isso são as estranhezas do JS, não me julge :)
 
 ```typescript
 const meusNumeros: number[] = [1,2,3]
@@ -34,7 +34,7 @@ console.log(meusNumeros)
 ```
 
 ### Tuplas?
-#### *obs*: tuplas é molde de como o objeto deve ficar
+ *obs*: tuplas é molde de como o objeto deve ficar
 ```typescript
 let minhaTuplas: [number, string, string[]]
 minhasTuplas = [5, "teste", ["a","b"]]// observer que eu fiz um array so
@@ -56,7 +56,7 @@ usuario.trabalho = "Programador"// erro
 ```
 
 ### Any(qualquer)
-#### *obs*: posso declarar qualquer valor a minha variavel, muito usado quando
+ *obs*: posso declarar qualquer valor a minha variavel, muito usado quando
 programadores iniciantes começam na linguagem ou se sei que aquela variavel
 poder vir valores de valarios tipos
 
