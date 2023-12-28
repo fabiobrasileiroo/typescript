@@ -51,4 +51,9 @@ a = []
 let id: string | number = "10"
 console.log(id)
 
-//
+// type alias
+type myIdType = number | string
+
+const userId: myIdType = "fabio"
+const idade: myIdType = 20
+const shirId: myIdType = 123

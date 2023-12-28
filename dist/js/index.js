@@ -37,5 +37,7 @@ a = [];
 // union type
 let id = "10";
 console.log(id);
-//
+const userId = "fabio";
+const idade = 20;
+const shirId = 123;
 //# sourceMappingURL=index.js.map
