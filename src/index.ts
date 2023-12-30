@@ -180,7 +180,9 @@ class User {
     }
 }
 const zeca = new User("Zéca", "Admin", true)
+
 console.log(zeca)
+
 zeca.showUserName()
 
 zeca.showUserRole(false)
@@ -188,5 +190,62 @@ zeca.showUserRole(false)
 // interface em classes
 interface IVehicle {
     brand: string
-    showBrand()
+    showBrand():void
 }
+
+class Car implements IVehicle {
+
+    brand
+    wheels
+
+    constructor(brand: string, wheels: number) {
+        this.brand = brand
+        this.wheels = wheels
+    }
+    showBrand(): void {
+        console.log(`A marca do carro é: ${this.brand}`)
+    }
+}
+
+const fusca = new Car("VW", 4)
+
+fusca.showBrand()
+
+// heranca
+class SuperCar extends Car {
+    engine
+
+    constructor(brand: string, wheels: number, engine: number) {
+            super(brand, wheels)
+            this.engine = engine
+    }
+}
+
+const a4 = new SuperCar("Audi", 4, 2.0)
+
+console.log(a4)
+
+a4.showBrand();
+
+// decorators
+
+//constructor decorators
+function BaseParameters() {
+    return function <T extends { new (...args:any[]): {} }>(constructor:T) {
+        return class extends constructor {
+            id = Math.random()
+            createAt = new Date()
+        }
+    }
+}
+@BaseParameters()
+class Person {
+    name 
+
+    constructor(name: string) {
+        this.name = name
+    }
+}
+
+const sam = new Person("Sam")
+console.log(sam)
